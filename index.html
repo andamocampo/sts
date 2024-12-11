@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="GE 7 - STS Project, Created by John Patrick Salcedo">
+
+    <title>Andam Ocampo!</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/img/ao.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="hlogo">
+                <img src="assets/img/ao - white logo.png" alt="ao - white logo">
+            </div>
+            <ul class="nav-bar">
+                <li><a href="#hero">HOME</a></li>
+                <li><a href="#infohub">INFOHUB</a></li>
+                <li><a href="#about-section">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="hero">        
+        <div class="hero-text">
+            <h1>How <span class="changing-word">Ready</span> Do You Think<br>Ocampo Is For Natural Disasters?</h1>
+            <p>Think Ocampo is ready for natural disasters? Put your perspective to the test!<br>Compare your assessment with real facts to uncover how prepared our municipality truly is.</p>
+        </div>
+        <button class="hero-button">LEARN MORE</button>
+    </section>
+
+    <section id="about-section" class="about-section">
+        <div class="about-text">
+            <div class="faq">
+                <div class="faq-item active"> <!-- Initially active -->
+                    <button class="faq-question">Did You Know?</button>
+                    <div class="faq-answer">
+                        <p>The term ANDAM in Bikol means "ready" or "prepare," reflecting the Bicolano people's resilience and readiness to face challenges, particularly natural disasters. The word has Austronesian roots, resonating with similar terms across Philippine languages, symbolizing preparedness as a cultural value. In the disaster-prone Bicol region, where typhoons are frequent, being ANDAM is a way of life, shaping everything from local traditions to community planning efforts to foster safety and unity.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is this site about?</button>
+                    <div class="faq-answer">
+                        <p>“Andam Ocampo!” is a platform designed to help the community evaluate its disaster preparedness with an engaging and humorous twist. It's all about raising awareness with a sprinkle of fun!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Why should I care?</button>
+                    <div class="faq-answer">
+                        <p>Because your life depends on it! Knowing your community's disaster readiness can make the difference between "I’m prepared" and "Oh no, I forgot the flashlight!"</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does this site work?</button>
+                    <div class="faq-answer">
+                        <p>This website allows you to rate Ocampo’s disaster preparedness in various categories, and we compare your ratings with factual data, helping you understand the reality versus your perception.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Who made this?</button>
+                    <div class="faq-answer">
+                        <div class="creator-info">
+                            <img src="assets/img/patty.png" alt="Patty" class="creator-picture">
+                            <p>Hi, I’m Patrick, a BSIT student at Camarines Sur Polytechnic Colleges. I created this site to combine technology, creativity, and humor to make disaster preparedness fun and informative.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="cta-button" id="start-assessment-button">Start the Assessment</button>
+        </div>
+        <div class="about-image">
+            <img src="assets/img/about.png" alt="Andam Ocampo">
+        </div>
+    </section>
+
+    <section class="assessment-section" id="assessment-section">
+        <div class="container">
+            <div class="assessment-logo">
+                <img src="assets/img/ao - line logo.svg" alt="ao - line logo">
+            </div>
+            <!-- Title -->
+            <h2>Rating Ocampo's DRRM (<span id="persona-title">Ocampoanon</span> Edition)</h2>
+            
+            <!-- Persona Selector -->
+            <div class="persona-selector" id="persona-selector">
+                <label for="persona">Choose Your Persona:</label>
+                <select id="persona">
+                    <option value="" disabled selected>Select Your Persona</option>
+                    <option value="Taong-Bahay">Taong-Bahay</option>
+                    <option value="Tambay sa Kanto">Tambay sa Kanto</option>
+                    <option value="Sawi sa Pag-ibig">Sawi sa Pag-ibig</option>
+                    <option value="Single Since Birth">Single Since Birth</option>
+                    <option value="Bayanihan Master">Bayanihan Master</option>
+                    <option value="Impostor (Taga-Baao)">Impostor (Taga-Baao)</option>
+                </select>
+            </div>
+            
+            <!-- Instructions -->
+            <div class="instructions" id="instructions" style="display: none;">
+                <p>
+                    Rate Ocampo’s preparedness in the following areas. Your answers will be compared to factual data 
+                    to see how your perspective aligns with reality.
+                </p>
+            </div>
+            
+            <!-- Assessment Form -->
+            <form id="assessment-form">
+                <!-- Evacuation Plans -->
+                <div class="category">
+                    <h3>Evacuation Plans</h3>
+                    <div class="question">
+                        <label for="question-1">How clear and accessible do you think evacuation plans in Ocampo are?</label>
+                        <div class="rating-options" id="question-1">
+                            <label><input type="radio" name="question-1" value="1"> 1</label>
+                            <label><input type="radio" name="question-1" value="2"> 2</label>
+                            <label><input type="radio" name="question-1" value="3"> 3</label>
+                            <label><input type="radio" name="question-1" value="4"> 4</label>
+                            <label><input type="radio" name="question-1" value="5"> 5</label>
+                            <label><input type="radio" name="question-1" value="6"> 6</label>
+                            <label><input type="radio" name="question-1" value="7"> 7</label>
+                            <label><input type="radio" name="question-1" value="8"> 8</label>
+                            <label><input type="radio" name="question-1" value="9"> 9</label>
+                            <label><input type="radio" name="question-1" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-1">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-1"></span>. Based on our research, Ocampo has made substantial progress in disaster planning, particularly with the approval of its Municipal Disaster Risk Reduction and Management Plan (MDRRMP), which is used in briefings for calamity response and other proactive measures. The municipality has also developed a Climate and Disaster Risk Assessment (CDRA) for 2023, along with contingency plans for Tropical Cyclone Wind Signals. Additionally, DOST-PHIVOLCS has provided important hazard maps for Isarog Volcano, including lava flow, pyroclastic density current, and lahar hazard maps.
+                                The MDRRMO also distributed DRRM materials to all 25 barangays, including five tarpaulins per barangay featuring detailed flood hazard maps, landslide susceptibility maps, and Isarog Volcano-related hazard maps. In 10 remote barangays, these hazard maps are posted in visible locations, such as barangay halls and BDRRMC offices, to increase awareness among residents. Signage also guides people to evacuation centers in flood-prone and landslide-susceptible areas.
+                                Despite these efforts, there are still significant challenges in terms of public engagement and awareness, particularly at the barangay level. While hazard maps and signage are in place, their utilization and public awareness remain low in many areas. The MDRRMO’s online hazard map postings are not always clear, and there is a need for higher-quality, accessible copies of these maps. Furthermore, while signage exists, the practical use and understanding of these materials could be improved, especially in remote areas where access to resources may be limited.
+                                These steps show progress but also highlight the need for increased transparency, clearer communication, and greater public involvement. Improving the accessibility of disaster plans and hazard maps, as well as fostering better public engagement in disaster preparedness at the barangay level, would strengthen Ocampo’s overall disaster risk reduction efforts. We rate this as <span id="factual-score-1"></span>, acknowledging progress while emphasizing the need for improvement in public awareness and engagement.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q1-2.jpg" alt="Evacuation center signage" class="fact-photo">
+                                <img src="assets/img/q1-1.jpg" alt="Emergency briefing whiteboard plan" class="fact-photo">
+                                <img src="assets/img/q1-3.jpg" alt="Hazard signage for landslide/flood-prone areas" class="fact-photo">
+                            </div>
+                        </div>                                                
+                    </div>
+                    <div class="question">
+                        <label for="question-2">Rate the adequacy of evacuation centers in terms of capacity.</label>
+                        <div class="rating-options" id="question-2">
+                            <label><input type="radio" name="question-2" value="1"> 1</label>
+                            <label><input type="radio" name="question-2" value="2"> 2</label>
+                            <label><input type="radio" name="question-2" value="3"> 3</label>
+                            <label><input type="radio" name="question-2" value="4"> 4</label>
+                            <label><input type="radio" name="question-2" value="5"> 5</label>
+                            <label><input type="radio" name="question-2" value="6"> 6</label>
+                            <label><input type="radio" name="question-2" value="7"> 7</label>
+                            <label><input type="radio" name="question-2" value="8"> 8</label>
+                            <label><input type="radio" name="question-2" value="9"> 9</label>
+                            <label><input type="radio" name="question-2" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-2">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-2"></span>. Based on our research, only 8 out of Ocampo’s 25 barangays have dedicated evacuation centers highlighting a significant shortfall in preparedness. Many barangays rely on multi-use facilities such as schools, chapels, barangay halls, health centers, and covered courts. While these options offer flexibility, they often lack sufficient capacity and may not meet safety standards during extreme weather events. In some cases, families choose to remain at home due to the inadequacy of these facilities. The situation highlights a critical gap in ensuring safe, sufficient, and accessible evacuation spaces for all residents. We rate this as <span id="factual-score-2">5</span>, acknowledging the existing infrastructure but emphasizing the need for improvement in capacity and safety.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q2-1.jpg" alt="Dedicated evacuation center in Ocampo" class="fact-photo">
+                                <img src="assets/img/q2-2.jpg" alt="School used as evacuation center" class="fact-photo">
+                                <img src="assets/img/q2-3.jpg" alt="Overcrowded evacuation center" class="fact-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <label for="question-3">How well do you think evacuation centers are equipped (food, water, medicine)?</label>
+                        <div class="rating-options" id="question-3">
+                            <label><input type="radio" name="question-3" value="1"> 1</label>
+                            <label><input type="radio" name="question-3" value="2"> 2</label>
+                            <label><input type="radio" name="question-3" value="3"> 3</label>
+                            <label><input type="radio" name="question-3" value="4"> 4</label>
+                            <label><input type="radio" name="question-3" value="5"> 5</label>
+                            <label><input type="radio" name="question-3" value="6"> 6</label>
+                            <label><input type="radio" name="question-3" value="7"> 7</label>
+                            <label><input type="radio" name="question-3" value="8"> 8</label>
+                            <label><input type="radio" name="question-3" value="9"> 9</label>
+                            <label><input type="radio" name="question-3" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-3">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-3">6</span>. Based on our research, while evacuation centers in Ocampo typically provide water and occasional meals prepared by volunteers, evacuees often rely on their own supplies initially, as relief distribution can be delayed. Temporary evacuation centers lack essential facilities like cooking areas, which can hinder meal preparation. Medicine availability depends heavily on the resources of the local barangay healthcare unit or external supplies coordinated by officials. A critical issue is the poor sanitation, as the number of evacuees often far exceeds the available comfort rooms, leading to hygiene challenges during prolonged stays. We rate this as <span id="factual-score-3">5</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q3-1.jpg" alt="Volunteers preparing meals at an evacuation center" class="fact-photo">
+                                <img src="assets/img/q3-2.jpg" alt="Evacuation center with limited facilities" class="fact-photo">
+                                <img src="assets/img/q3-3.jpg" alt="Overcrowded restrooms in an evacuation center" class="fact-photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Community Awareness -->
+                <div class="category">
+                    <h3>Community Awareness</h3>
+                    <div class="question">
+                        <label for="question-4">Rate the effectiveness of information campaigns about typhoon preparedness.</label>
+                        <div class="rating-options" id="question-4">
+                            <label><input type="radio" name="question-4" value="1"> 1</label>
+                            <label><input type="radio" name="question-4" value="2"> 2</label>
+                            <label><input type="radio" name="question-4" value="3"> 3</label>
+                            <label><input type="radio" name="question-4" value="4"> 4</label>
+                            <label><input type="radio" name="question-4" value="5"> 5</label>
+                            <label><input type="radio" name="question-4" value="6"> 6</label>
+                            <label><input type="radio" name="question-4" value="7"> 7</label>
+                            <label><input type="radio" name="question-4" value="8"> 8</label>
+                            <label><input type="radio" name="question-4" value="9"> 9</label>
+                            <label><input type="radio" name="question-4" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-4">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-4">8</span>. Based on our research, Ocampo's information campaigns on typhoon preparedness are moderately effective. The MDRRMO collaborates with barangay officials to conduct assemblies focused on disaster preparedness and regularly shares updates and educational content through its Facebook account. However, the reach of these campaigns is limited, as not all residents have access to the internet or are aware of the account's existence. Tarpaulins and posters in barangay halls provide additional guidance, but these efforts are not comprehensive enough to ensure wide public awareness. While commendable, there is significant room for improvement, especially in reaching underserved communities. We rate this as <span id="factual-score-4">7</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q4-1.jpg" alt="MDRRMO barangay assembly on disaster preparedness" class="fact-photo">
+                                <img src="assets/img/q4-2.jpg" alt="Typhoon preparedness posters in a barangay hall" class="fact-photo">
+                                <img src="assets/img/q4-3.png" alt="MDRRMO Facebook page showing updates" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="question">
+                        <label for="question-5">How well-informed do you think the residents are about evacuation protocols?</label>
+                        <div class="rating-options" id="question-5">
+                            <label><input type="radio" name="question-5" value="1"> 1</label>
+                            <label><input type="radio" name="question-5" value="2"> 2</label>
+                            <label><input type="radio" name="question-5" value="3"> 3</label>
+                            <label><input type="radio" name="question-5" value="4"> 4</label>
+                            <label><input type="radio" name="question-5" value="5"> 5</label>
+                            <label><input type="radio" name="question-5" value="6"> 6</label>
+                            <label><input type="radio" name="question-5" value="7"> 7</label>
+                            <label><input type="radio" name="question-5" value="8"> 8</label>
+                            <label><input type="radio" name="question-5" value="9"> 9</label>
+                            <label><input type="radio" name="question-5" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-5">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-5">X</span>. Based on our research, most residents in Ocampo are aware of the location of evacuation centers and how to reach them, supported by helpful signage and annual seminars conducted by the MDRRMO and barangay officials. These efforts are complemented by the distribution of Information, Education, and Communication (IEC) materials. However, detailed knowledge of protocols—such as when to evacuate, what to bring, and expected behavior in evacuation centers—remains limited. Additionally, efforts to reach the most remote and reluctant communities, including indigenous peoples and those in high-risk areas, require significant improvement to ensure inclusivity and preparedness. We rate this as <span id="factual-score-5">7</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q5-1.png" alt="Evacuation signage in Ocampo" class="fact-photo">
+                                <img src="assets/img/q5-3.jpg" alt="Residents attending a seminar on evacuation protocols" class="fact-photo">
+                                <img src="assets/img/q5-2.jpg" alt="IEC materials distributed during the seminar" class="fact-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <label for="question-6">How often do you think disaster drills and simulations are conducted?</label>
+                        <div class="rating-options" id="question-6">
+                            <label><input type="radio" name="question-6" value="1"> 1</label>
+                            <label><input type="radio" name="question-6" value="2"> 2</label>
+                            <label><input type="radio" name="question-6" value="3"> 3</label>
+                            <label><input type="radio" name="question-6" value="4"> 4</label>
+                            <label><input type="radio" name="question-6" value="5"> 5</label>
+                            <label><input type="radio" name="question-6" value="6"> 6</label>
+                            <label><input type="radio" name="question-6" value="7"> 7</label>
+                            <label><input type="radio" name="question-6" value="8"> 8</label>
+                            <label><input type="radio" name="question-6" value="9"> 9</label>
+                            <label><input type="radio" name="question-6" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-6">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-6">X</span>. Based on our research, disaster drills and simulations in Ocampo are conducted with commendable frequency. Earthquake drills are held 1–4 times a year, primarily in schools, while community-based disaster preparedness seminars covering typhoons, fire prevention, landslides, and other hazards occur at least once annually in each barangay. These activities are facilitated by the MDRRMO with the support of local BFP and PNP units. However, there remains a gap in extending these efforts to IP communities and individuals residing in remote hazardous areas. To achieve comprehensive disaster preparedness, inclusivity in these drills is essential. We rate this as <span id="factual-score-6">9</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q6-2.jpg" alt="Earthquake drill in a local school" class="fact-photo">
+                                <img src="assets/img/q6-3.jpg" alt="Community seminar on disaster preparedness" class="fact-photo">
+                                <img src="assets/img/q6-1.jpg" alt="Simulation conducted by MDRRMO with BFP and PNP assistance" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            
+                <!-- Emergency Response -->
+                <div class="category">
+                    <h3>Emergency Response</h3>
+                    <div class="question">
+                        <label for="question-7">How reliable do you think Ocampo’s emergency hotlines are?</label>
+                        <div class="rating-options" id="question-7">
+                            <label><input type="radio" name="question-7" value="1"> 1</label>
+                            <label><input type="radio" name="question-7" value="2"> 2</label>
+                            <label><input type="radio" name="question-7" value="3"> 3</label>
+                            <label><input type="radio" name="question-7" value="4"> 4</label>
+                            <label><input type="radio" name="question-7" value="5"> 5</label>
+                            <label><input type="radio" name="question-7" value="6"> 6</label>
+                            <label><input type="radio" name="question-7" value="7"> 7</label>
+                            <label><input type="radio" name="question-7" value="8"> 8</label>
+                            <label><input type="radio" name="question-7" value="9"> 9</label>
+                            <label><input type="radio" name="question-7" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-7">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-7">10</span>. Based on our research, Ocampo’s emergency hotlines are highly reliable and always active. The hotlines are consistently monitored, and the response team ensures they are available 24/7, especially for the patient transport vehicle, which is on standby during nighttime. In addition, during significant events like typhoons or other emergencies, the municipal mayor activates the Emergency Operation Center (EOC) and Incident Response Management Team (IRMT), ensuring a swift and coordinated response. We rate this as <span id="factual-score-7">10</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q7-1.jpg" alt="Emergency hotline team in action" class="fact-photo">
+                                <img src="assets/img/q7-2.jpg" alt="Emergency response vehicle in use" class="fact-photo">
+                                <img src="assets/img/q7-3.jpg" alt="Activation of emergency operations center during a calamity" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="question">
+                        <label for="question-8">Rate the availability of trained emergency response teams in the municipality.</label>
+                        <div class="rating-options" id="question-8">
+                            <label><input type="radio" name="question-8" value="1"> 1</label>
+                            <label><input type="radio" name="question-8" value="2"> 2</label>
+                            <label><input type="radio" name="question-8" value="3"> 3</label>
+                            <label><input type="radio" name="question-8" value="4"> 4</label>
+                            <label><input type="radio" name="question-8" value="5"> 5</label>
+                            <label><input type="radio" name="question-8" value="6"> 6</label>
+                            <label><input type="radio" name="question-8" value="7"> 7</label>
+                            <label><input type="radio" name="question-8" value="8"> 8</label>
+                            <label><input type="radio" name="question-8" value="9"> 9</label>
+                            <label><input type="radio" name="question-8" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-8">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-8">10</span>. Based on our research, the Incident Response Management Team (IRMT) in Ocampo is highly available and always on standby, even during non-disaster times. The team is composed of trained personnel from the MDRRMO, BFP, PNP, and other trained volunteer organizations, ensuring a well-coordinated and immediate response to emergencies. The municipal mayor issues a memo to activate the IRMT 24/7 during crisis, along with barangay DRRMCs, to monitor weather forecasts, provide situational reports, and prepare contingency measures. This level of preparedness ensures that emergency response is swift and efficient. We rate this as <span id="factual-score-8">10</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q8-1.jpg" alt="MDRRMO officers on standby" class="fact-photo">
+                                <img src="assets/img/q8-3.jpg" alt="Emergency response team in action during a disaster" class="fact-photo">
+                                <img src="assets/img/q8-2.jpg" alt="Barangay DRRMCs coordinating during an emergency" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="question">
+                        <label for="question-9">How quickly do you think help arrives during disasters?</label>
+                        <div class="rating-options" id="question-9">
+                            <label><input type="radio" name="question-9" value="1"> 1</label>
+                            <label><input type="radio" name="question-9" value="2"> 2</label>
+                            <label><input type="radio" name="question-9" value="3"> 3</label>
+                            <label><input type="radio" name="question-9" value="4"> 4</label>
+                            <label><input type="radio" name="question-9" value="5"> 5</label>
+                            <label><input type="radio" name="question-9" value="6"> 6</label>
+                            <label><input type="radio" name="question-9" value="7"> 7</label>
+                            <label><input type="radio" name="question-9" value="8"> 8</label>
+                            <label><input type="radio" name="question-9" value="9"> 9</label>
+                            <label><input type="radio" name="question-9" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-9">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-9">8</span>. Based on our research, Ocampo's emergency response teams are highly responsive, with help generally arriving within 1-2 hours depending on the location and time of request for help. The Incident Response Management Team (IRMT) coordinates with the nearest authorities for an initial response if needed, and once the situation is assessed, appropriate responders are quickly dispatched. Additionally, during calamities, the IRMT actively monitors affected areas and conducts rounds to assist those without communication means. The response time can vary depending on the nature of the emergency and the availability or capacity of the response teams. We rate this as <span id="factual-score-9">8</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q9-1.jpg" alt="Emergency response vehicle on the road" class="fact-photo">
+                                <img src="assets/img/q9-2.jpg" alt="Incident Response Management Team coordinating" class="fact-photo">
+                                <img src="assets/img/q9-3.jpg" alt="Disaster response during a typhoon" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            
+                <!-- Infrastructure Resilience -->
+                <div class="category">
+                    <h3>Infrastructure Resilience</h3>
+                    <div class="question">
+                        <label for="question-10">Rate the condition of public buildings in withstanding typhoons.</label>
+                        <div class="rating-options" id="question-10">
+                            <label><input type="radio" name="question-10" value="1"> 1</label>
+                            <label><input type="radio" name="question-10" value="2"> 2</label>
+                            <label><input type="radio" name="question-10" value="3"> 3</label>
+                            <label><input type="radio" name="question-10" value="4"> 4</label>
+                            <label><input type="radio" name="question-10" value="5"> 5</label>
+                            <label><input type="radio" name="question-10" value="6"> 6</label>
+                            <label><input type="radio" name="question-10" value="7"> 7</label>
+                            <label><input type="radio" name="question-10" value="8"> 8</label>
+                            <label><input type="radio" name="question-10" value="9"> 9</label>
+                            <label><input type="radio" name="question-10" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-10">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-10">7</span>. Based on our research, most public buildings in Ocampo, including evacuation centers, barangay halls, municipal halls, and public markets, are structurally strong and capable of withstanding typhoons with up to TC Wind Signal no. 3-4. These buildings, often made of concrete and well-engineered, can endure strong winds and heavy rainfall. However, some public buildings, such as elementary & secondary schools' classrooms and barangay chapels, which have commercially available grade B aluminum roofs, may suffer major damage or even complete destruction in stronger typhoons. Although ongoing construction and renovation efforts are improving the resilience of these buildings, there are still vulnerable structures that need attention. We rate this as <span id="factual-score-10">7</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q10-1.jpg" alt="Concrete evacuation center during typhoon" class="fact-photo">
+                                <img src="assets/img/q10-2.jpg" alt="Public building withstands strong winds" class="fact-photo">
+                                <img src="assets/img/q10-3.jpg" alt="Damaged building after a typhoon" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="question">
+                        <label for="question-11">How effective do you think the drainage systems are in preventing floods?</label>
+                        <div class="rating-options" id="question-11">
+                            <label><input type="radio" name="question-11" value="1"> 1</label>
+                            <label><input type="radio" name="question-11" value="2"> 2</label>
+                            <label><input type="radio" name="question-11" value="3"> 3</label>
+                            <label><input type="radio" name="question-11" value="4"> 4</label>
+                            <label><input type="radio" name="question-11" value="5"> 5</label>
+                            <label><input type="radio" name="question-11" value="6"> 6</label>
+                            <label><input type="radio" name="question-11" value="7"> 7</label>
+                            <label><input type="radio" name="question-11" value="8"> 8</label>
+                            <label><input type="radio" name="question-11" value="9"> 9</label>
+                            <label><input type="radio" name="question-11" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-11">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-11">8</span>. Based on our research, Ocampo’s drainage systems are around 75% effective in preventing floods. Over the past five years, significant efforts have been made to reinforce drainage canals, with many projects funded by the LGU and supported by KALAHI-CIDSS. These canals, with depths of 3 to 5 feet, effectively manage rapid water flow from mountains and rivers. However, challenges persist, particularly in poblacion barangays where plastic pollution leads to clogging, resulting in foot-level floods during intense rains. Additionally, in low-lying areas near spillways and rivers, there have been incident reports of floodwaters reaching chest level during the onslaught of Typhoon Kristine (2024), especially when riprap structures overflow. While cleanup efforts and anti-littering laws are in place, consistent enforcement, improved waste management, and further infrastructure development are needed. We rate this as <span id="factual-score-11">8</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q11-1.jpg" alt="Reinforced drainage canal in a barangay" class="fact-photo">
+                                <img src="assets/img/q11-2.jpg" alt="Flooded highway in poblacion barangay" class="fact-photo">
+                                <img src="assets/img/q11-3.png" alt="Low-lying area experiencing chest-level flooding" class="fact-photo">
+                            </div>
+                        </div>                                               
+                    </div>
+                    <div class="question">
+                        <label for="question-12">How resilient do you think roads and bridges are during typhoons?</label>
+                        <div class="rating-options" id="question-12">
+                            <label><input type="radio" name="question-12" value="1"> 1</label>
+                            <label><input type="radio" name="question-12" value="2"> 2</label>
+                            <label><input type="radio" name="question-12" value="3"> 3</label>
+                            <label><input type="radio" name="question-12" value="4"> 4</label>
+                            <label><input type="radio" name="question-12" value="5"> 5</label>
+                            <label><input type="radio" name="question-12" value="6"> 6</label>
+                            <label><input type="radio" name="question-12" value="7"> 7</label>
+                            <label><input type="radio" name="question-12" value="8"> 8</label>
+                            <label><input type="radio" name="question-12" value="9"> 9</label>
+                            <label><input type="radio" name="question-12" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-12">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-12">8</span>. Based on our research, Ocampo’s roads and bridges are generally resilient during typhoons. National highways and major bridges are well-maintained and remain passable even during heavy rains and flooding, thanks to annual assessments and regular maintenance. However, challenges remain in rural barangays, where smaller and makeshift bridges are more vulnerable. During Typhoon Kristine (2024), a reported hanging bridge in one barangay was completely destroyed, and some makeshift rural bridges became too risky to cross due to structural damage and water flow. Additionally, rural roads near rivers became impassable due to the strong current and flooding, further complicating access. 
+                        
+                                Reconstruction projects are underway to address these issues, with significant efforts to reinforce rural roads and bridges. While the overall infrastructure has shown resilience, particularly for major roads, there is still a need for continued upgrades to ensure that smaller rural infrastructure can withstand extreme weather conditions. We rate this as <span id="factual-score-12">8</span>, recognizing the progress made while emphasizing the importance of ongoing improvements in rural infrastructure resilience.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q12-1.jpg" alt="National highway during a typhoon" class="fact-photo">
+                                <img src="assets/img/q12-2.png" alt="Damaged rural road after heavy rains" class="fact-photo">
+                                <img src="assets/img/q12-3.jpg" alt="Mini-bridge affected by strong water flow" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+
+                <!-- Preparedness of Government Offices -->
+                <div class="category">
+                    <h3>Preparedness of Government Offices</h3>
+                    <div class="question">
+                        <label for="question-13">How well-prepared do you think local government offices are in terms of response plans?</label>
+                        <div class="rating-options" id="question-13">
+                            <label><input type="radio" name="question-13" value="1"> 1</label>
+                            <label><input type="radio" name="question-13" value="2"> 2</label>
+                            <label><input type="radio" name="question-13" value="3"> 3</label>
+                            <label><input type="radio" name="question-13" value="4"> 4</label>
+                            <label><input type="radio" name="question-13" value="5"> 5</label>
+                            <label><input type="radio" name="question-13" value="6"> 6</label>
+                            <label><input type="radio" name="question-13" value="7"> 7</label>
+                            <label><input type="radio" name="question-13" value="8"> 8</label>
+                            <label><input type="radio" name="question-13" value="9"> 9</label>
+                            <label><input type="radio" name="question-13" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-13">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-13">8</span>. Based on our research, Ocampo’s local government offices demonstrate a solid level of preparedness when it comes to disaster response plans. The LGU has established protocols for coordinating with barangay DRRMCs and other authorities through emergency meetings and briefings, forming an efficient Incident Response Management Team (IRMT). Proactive measures, such as early issuance of memos by the municipal mayor, ensure timely responses during calamities. The LGU also conducts an annual Climate and Disaster Risk Assessment (CDRA) to identify vulnerabilities and plan accordingly. A municipal Contingency Plan for Tropical Cyclone Wind Signals is in place, ensuring preparedness for specific scenarios. While response plans are reportedly comprehensive and refined based on past performance, they are not yet publicized for transparency. Additionally, at the barangay level, implementation can be challenging due to factors like the reluctance of some residents to follow preemptive measures. The integration of advisories from EDMERO and PAGASA into their plans further highlights their commitment to continuous improvement. We rate this as <span id="factual-score-13">8</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q13-1.jpg" alt="Emergency briefing session with LGU officials" class="fact-photo">
+                                <img src="assets/img/q13-2.jpg" alt="Incident Response Management Team at work" class="fact-photo">
+                                <img src="assets/img/q13-3.jpg" alt="Coordination meeting with barangay DRRMCs" class="fact-photo">
+                            </div>
+                        </div>                                                  
+                    </div>
+                    <div class="question">
+                        <label for="question-14">Rate the availability of funding and resources allocated for disaster preparedness.</label>
+                        <div class="rating-options" id="question-14">
+                            <label><input type="radio" name="question-14" value="1"> 1</label>
+                            <label><input type="radio" name="question-14" value="2"> 2</label>
+                            <label><input type="radio" name="question-14" value="3"> 3</label>
+                            <label><input type="radio" name="question-14" value="4"> 4</label>
+                            <label><input type="radio" name="question-14" value="5"> 5</label>
+                            <label><input type="radio" name="question-14" value="6"> 6</label>
+                            <label><input type="radio" name="question-14" value="7"> 7</label>
+                            <label><input type="radio" name="question-14" value="8"> 8</label>
+                            <label><input type="radio" name="question-14" value="9"> 9</label>
+                            <label><input type="radio" name="question-14" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-14">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-14">8</span>. Based on our research, Ocampo’s local government has shown a consistent commitment to funding disaster preparedness initiatives. In 2021, the LGU donated ₱200,000.00 from the Quick Response Fund (QRF) of the Municipal Disaster Risk Reduction and Management Fund (MDRRMF) to Group Initiatives for Better Opportunities, Inc. (GIBO) for relief operations following Typhoon Odette. Moreover, the Municipal Disaster Risk Reduction and Management Council (MDRRMC) actively allocates budgets for prevention and mitigation, as evidenced by their approval of a ₱1.8M supplemental budget for a multi-purpose evacuation/quarantine facility in Cagmanaba. However, despite these efforts, some gaps remain, particularly in the availability of immediate relief supplies and essential resources for response teams, such as rescue boats. On a positive note, initiatives like the distribution of "Go Bags," which include emergency kits and informational materials, show the LGU’s efforts to enhance community preparedness. Overall, we rate this as <span id="factual-score-14">8</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q14-1.jpg" alt="Meeting for disaster funds allocation" class="fact-photo">
+                                <img src="assets/img/q14-2.png" alt="Construction of evacuation facility" class="fact-photo">
+                                <img src="assets/img/q14-3.jpg" alt="Distributed Go Bags for disaster preparedness" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="question">
+                        <label for="question-15">How transparent do you think local leaders are in communicating disaster plans?</label>
+                        <div class="rating-options" id="question-15">
+                            <label><input type="radio" name="question-15" value="1"> 1</label>
+                            <label><input type="radio" name="question-15" value="2"> 2</label>
+                            <label><input type="radio" name="question-15" value="3"> 3</label>
+                            <label><input type="radio" name="question-15" value="4"> 4</label>
+                            <label><input type="radio" name="question-15" value="5"> 5</label>
+                            <label><input type="radio" name="question-15" value="6"> 6</label>
+                            <label><input type="radio" name="question-15" value="7"> 7</label>
+                            <label><input type="radio" name="question-15" value="8"> 8</label>
+                            <label><input type="radio" name="question-15" value="9"> 9</label>
+                            <label><input type="radio" name="question-15" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-15">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-15">7</span>. Based on our research, Ocampo’s local leaders demonstrate a level of transparency in communicating disaster-related information, particularly through barangay officials and public announcements. However, disaster response and preparedness plans are primarily discussed within the MDRRMO and BDRRMC meetings, with only authorized officials having full access to these plans. While relevant details are disseminated to residents, there’s room for improvement in public accessibility to the full scope of these plans, such as through published minutes of meetings or summary reports. Increased transparency, especially regarding the utilization of the MDRRM Fund, could enhance public trust and encourage greater community involvement. We rate this as <span id="factual-score-15">7</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q15-2.jpg" alt="MDRRMC emergency meeting in session" class="fact-photo">
+                                <img src="assets/img/q15-1.jpg" alt="Barangay officials disseminating disaster info" class="fact-photo">
+                                <img src="assets/img/q15-3.jpg" alt="Example of MDRRM Fund utilization project" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                
+                <!-- Overall Preparedness -->
+                <div class="category">
+                    <h3>Overall Preparedness</h3>
+                    <div class="question">
+                        <label for="question-16">Rate Ocampo’s use of technology (e.g., weather updates, alert systems).</label>
+                        <div class="rating-options" id="question-16">
+                            <label><input type="radio" name="question-16" value="1"> 1</label>
+                            <label><input type="radio" name="question-16" value="2"> 2</label>
+                            <label><input type="radio" name="question-16" value="3"> 3</label>
+                            <label><input type="radio" name="question-16" value="4"> 4</label>
+                            <label><input type="radio" name="question-16" value="5"> 5</label>
+                            <label><input type="radio" name="question-16" value="6"> 6</label>
+                            <label><input type="radio" name="question-16" value="7"> 7</label>
+                            <label><input type="radio" name="question-16" value="8"> 8</label>
+                            <label><input type="radio" name="question-16" value="9"> 9</label>
+                            <label><input type="radio" name="question-16" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-16">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-16">9</span>. Based on our research, Ocampo’s MDRRMO demonstrates a robust and innovative use of technology in disaster preparedness and response. Their dedicated Facebook account, operational for over eight years, along with the municipality and mayor’s pages, effectively disseminates crucial updates and DRRM-related knowledge. These platforms not only serve as tools for raising public awareness but also document MDRRMO operations, projects, and activities consistently since 2017.  
+                                During calamities, the MDRRMO employs technology to monitor weather conditions, provide real-time updates, and communicate advisories to residents. They rely on official forecasts and bulletins from PAGASA and EDMERO to guide their actions. This year, they advanced their capabilities by introducing camera drones to document and monitor affected areas, enhancing situational awareness and response efficiency.  
+                                For typhoon advisories, traditional methods are combined with technology; vehicles equipped with megaphones make rounds to issue warnings and evacuation instructions. Additionally, Incident Response Management Team (IRMT) personnel use specialized geotagging-enabled camera apps for accurate documentation of incidents and resources, which facilitates effective coordination and reporting.  
+                                However, despite these commendable efforts, there remains substantial room for improvement. The integration of emerging technologies such as AI-powered disaster forecasting tools, enhanced communication systems for faster broadcasting of advisories, and other advanced monitoring technologies could further optimize their response strategies. Access to such innovations would significantly boost the municipality's technological preparedness and capacity for disaster management. We rate this as <span id="factual-score-16">9</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q16-2.jpg" alt="MDRRMO Facebook updates showcasing typhoon response" class="fact-photo">
+                                <img src="assets/img/q16-1.jpg" alt="Drone footage of affected areas in Ocampo" class="fact-photo">
+                                <img src="assets/img/q16-3.jpg" alt="Vehicle making announcements via megaphone" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="question">
+                        <label for="question-17">Rate the level of cooperation among residents during typhoon events.</label>
+                        <div class="rating-options" id="question-17">
+                            <label><input type="radio" name="question-17" value="1"> 1</label>
+                            <label><input type="radio" name="question-17" value="2"> 2</label>
+                            <label><input type="radio" name="question-17" value="3"> 3</label>
+                            <label><input type="radio" name="question-17" value="4"> 4</label>
+                            <label><input type="radio" name="question-17" value="5"> 5</label>
+                            <label><input type="radio" name="question-17" value="6"> 6</label>
+                            <label><input type="radio" name="question-17" value="7"> 7</label>
+                            <label><input type="radio" name="question-17" value="8"> 8</label>
+                            <label><input type="radio" name="question-17" value="9"> 9</label>
+                            <label><input type="radio" name="question-17" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-17">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-17">8</span>. Based on our research, Ocampo residents exhibit a commendable level of cooperation during typhoon events. The majority of the population adheres to directives issued by local authorities, particularly when it comes to evacuation and disaster preparedness measures. This cooperation stems from the consistent efforts of the Incident Response Management Team (IRMT), barangay officials, and the community’s overall awareness of disaster risks.  
+                                Pre-emptive or forced evacuations are conducted in cases where residents show reluctance to leave their homes. These operations, spearheaded by MDRRMO officers, barangay councilors, and tanods, are especially targeted at high-risk zones such as flood-prone areas and landslide-prone communities. The involvement of the Philippine National Police (PNP) and the Armed Forces of the Philippines (AFP) in IRMT activities reinforces the seriousness of these efforts, as their authority commands compliance.  
+                                Cooperation is particularly evident among residents who proactively evacuate, recognizing the risks posed by their geographic locations. However, challenges remain with certain individuals or families who are hesitant to leave their homes due to personal reasons or attachment to their property. Barangay officials work tirelessly to address these concerns, ensuring the safety of every resident through direct communication and community-level engagement.  
+                                Over time, the municipality’s education campaigns and the dissemination of disaster preparedness information have cultivated a culture of cooperation and collective responsibility. This spirit of unity and responsiveness continues to strengthen Ocampo’s resilience against typhoon-related disasters. However, further efforts to encourage 100% compliance, especially through enhanced community education and support mechanisms, would be beneficial.  
+                                Overall, the cooperation among residents is robust and significantly contributes to the municipality’s disaster management effectiveness. We rate this as <span id="factual-score-17">8</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q17-1.jpg" alt="IRMT personnel conducting evacuations in Ocampo" class="fact-photo">
+                                <img src="assets/img/q17-2.jpg" alt="Residents moving to evacuation centers during typhoons" class="fact-photo">
+                                <img src="assets/img/q17-3.jpg" alt="Community meeting about disaster preparedness" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="question">
+                        <label for="question-18">How proactive do you think the municipality is in reducing risks before a disaster?</label>
+                        <div class="rating-options" id="question-18">
+                            <label><input type="radio" name="question-18" value="1"> 1</label>
+                            <label><input type="radio" name="question-18" value="2"> 2</label>
+                            <label><input type="radio" name="question-18" value="3"> 3</label>
+                            <label><input type="radio" name="question-18" value="4"> 4</label>
+                            <label><input type="radio" name="question-18" value="5"> 5</label>
+                            <label><input type="radio" name="question-18" value="6"> 6</label>
+                            <label><input type="radio" name="question-18" value="7"> 7</label>
+                            <label><input type="radio" name="question-18" value="8"> 8</label>
+                            <label><input type="radio" name="question-18" value="9"> 9</label>
+                            <label><input type="radio" name="question-18" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-18">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-18">9</span>. Based on our research and observations, the Municipality of Ocampo demonstrates a proactive approach to disaster risk reduction, as evidenced by its comprehensive and systematic pre-disaster measures. These efforts significantly reduce risks and enhance the safety of residents in the face of potential disasters.  
+                                The Incident Response Management Team (IRMT) and the Emergency Operations Center (EOC) are activated 24/7 during disaster-prone periods, ensuring real-time monitoring, quick decision-making, and immediate response. Coordination with Barangay DRRMCs (Disaster Risk Reduction and Management Committees) is a central element of this system, enabling grassroots-level preparedness and action.  
+                                Specific preemptive measures have been institutionalized, such as:  
+                                (1) activation of Barangay DRRMCs to monitor high-risk areas, especially those prone to landslides or flooding,  
+                                (2) conducting preemptive evacuations in low-lying or flood-prone areas,  
+                                (3) utilizing early warning systems like <i>bandilyo</i> (mobile public announcements) to disseminate critical advisories,  
+                                (4) implementing safety protocols in evacuation centers, and
+                                (5) monitoring settlements near riverbanks to prevent water-related activities and mitigate erosion risks.  
+                                The municipality also ensures constant communication between barangay officials and the MDRRMO through situation reports and text updates. Early planning, such as the preparation of contingency measures, underscores the proactive stance of local leaders. Regular updates from DOST-PAGASA, combined with vigilant monitoring by the MDRRMO, further strengthen disaster preparedness efforts.  
+                                While these measures are commendable, there is always room for improvement. Increasing community awareness and participation in risk reduction activities, as well as leveraging advanced forecasting and simulation technologies, could elevate the municipality’s proactiveness to an even higher level. We rate this as <span id="factual-score-18">9</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q18-1.jpg" alt="IRMT team preparing for disaster response" class="fact-photo">
+                                <img src="assets/img/q18-2.png" alt="Evacuation efforts in Ocampo during a typhoon warning" class="fact-photo">
+                                <img src="assets/img/q18-3.jpg" alt="Barangay officials conducting bandilyo announcements" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="question">
+                        <label for="question-19">How effective do you think the recovery efforts are after a typhoon?</label>
+                        <div class="rating-options" id="question-19">
+                            <label><input type="radio" name="question-19" value="1"> 1</label>
+                            <label><input type="radio" name="question-19" value="2"> 2</label>
+                            <label><input type="radio" name="question-19" value="3"> 3</label>
+                            <label><input type="radio" name="question-19" value="4"> 4</label>
+                            <label><input type="radio" name="question-19" value="5"> 5</label>
+                            <label><input type="radio" name="question-19" value="6"> 6</label>
+                            <label><input type="radio" name="question-19" value="7"> 7</label>
+                            <label><input type="radio" name="question-19" value="8"> 8</label>
+                            <label><input type="radio" name="question-19" value="9"> 9</label>
+                            <label><input type="radio" name="question-19" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-19">
+                            <p><strong>What's The Fact?</strong></p>
+                            <p>
+                                You rated <span id="user-score-19">8</span>. Based on our research and observations, the Municipality of Ocampo has established a structured and generally effective approach to recovery after typhoons. Once it is safe to return, evacuees are transported home using municipal vehicles, while road clearing operations are conducted to restore accessibility. CASURECO IV, the local electricity cooperative, promptly carries out line clearing operations to ensure the swift restoration of power. Barangay officials perform house-to-house inspections to assess damages, followed by the distribution of relief goods such as food, hygiene kits, and other essential items, prioritizing those in greatest need. Farmers whose crops are insured often receive aid to mitigate agricultural losses, and free medical services are provided to address health concerns post-disaster. Youth organizations, fraternities, and volunteers actively participate in donation drives, providing hot meals and distributing relief items, while schools conduct psychological aid sessions to help students recover mentally. The municipality also continues situational monitoring 24–48 hours after typhoons to evaluate recovery progress. However, some households report being overlooked during relief efforts, highlighting the need for better resource allocation, expanded supplies, and improved coordination among officials to ensure equitable distribution. Despite these challenges, the municipality’s collaborative efforts demonstrate strong commitment to recovery, with room for enhancements in efficiency and inclusivity. We rate this as <span id="factual-score-19">8</span>.
+                            </p>
+                            <div class="photo-gallery">
+                                <img src="assets/img/q19-1.jpg" alt="Road clearing operations post-typhoon" class="fact-photo">
+                                <img src="assets/img/q19-2.jpg" alt="CASURECO IV linemen restoring power in Ocampo" class="fact-photo">
+                                <img src="assets/img/q19-3.jpg" alt="Youth volunteers distributing relief goods" class="fact-photo">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="question">
+                        <label for="question-20">How would you rate Ocampo’s overall disaster preparedness?</label>
+                        <div class="rating-options" id="question-20">
+                            <label><input type="radio" name="question-20" value="1"> 1</label>
+                            <label><input type="radio" name="question-20" value="2"> 2</label>
+                            <label><input type="radio" name="question-20" value="3"> 3</label>
+                            <label><input type="radio" name="question-20" value="4"> 4</label>
+                            <label><input type="radio" name="question-20" value="5"> 5</label>
+                            <label><input type="radio" name="question-20" value="6"> 6</label>
+                            <label><input type="radio" name="question-20" value="7"> 7</label>
+                            <label><input type="radio" name="question-20" value="8"> 8</label>
+                            <label><input type="radio" name="question-20" value="9"> 9</label>
+                            <label><input type="radio" name="question-20" value="10"> 10</label>
+                        </div>
+                        <div class="fact hidden" id="fact-20">
+                            <p><strong>What's The Fact?</strong></p>
+                                <p>
+                                    Based on all the gathered information, Ocampo demonstrates commendable efforts in disaster preparedness, showcasing a robust and multi-faceted approach. The municipality’s MDRRMO is well-organized, with an active and responsive team supported by the coordinated efforts of barangay councils and the Incident Response Management Team (IRMT). Pre-disaster measures such as regular risk assessments, early warning systems, and preemptive evacuations highlight a proactive stance, as does the consistent activation of the Emergency Operations Center (EOC) during threats. The municipality’s use of social media and traditional methods like megaphone advisories ensures timely dissemination of information, and technological advancements, such as the introduction of drones for monitoring, bolster their response capabilities.  
+                                    Ocampo ranks 542nd out of 3rd to 4th class municipalities nationwide in the 2023 Cities and Municipalities Competitive Index, developed by the National Competitiveness Council through the Regional Competitiveness Committees (RCCs) with assistance from the United States Agency for International Development. This ranking highlights Ocampo’s overall competitiveness, with a particular focus on its 458th place in resiliency, showcasing its continuous improvement in disaster readiness.
+                                    Last December 4, Ocampo was recognized as a FULLY COMPLIANT LGU awardee for the consecutive year through the Office of Civil Defense Region 5 during the 24th GAWAD KALASAG Seal Awards. This prestigious recognition honors the dedication, resilience, and hard work of Ocampo’s local DRRM councils and offices in building safer communities through exceptional disaster risk reduction and management efforts. 
+                                    Financial commitment is evident, with funds allocated to constructing evacuation centers, relief operations, and DRRM training, although improvements are needed in resource allocation to expand emergency supplies and equipment, such as rescue boats. Residents, for the most part, cooperate during disasters, showing awareness and willingness to follow evacuation orders, although challenges remain with reluctant individuals. Recovery efforts, including road clearing, power restoration, distribution of relief goods, and provision of free medical services, demonstrate the municipality’s dedication to restoring normalcy post-typhoon. However, occasional gaps in equitable relief distribution indicate areas for enhancement.  
+                                    While Ocampo has made significant strides in disaster preparedness, integrating emerging technologies like AI for forecasting, improving resource accessibility, and enhancing transparency and inclusivity in planning and relief operations would further strengthen its capabilities. The overall readiness of the municipality is notable, with a clear commitment to safeguarding its residents and addressing the challenges posed by recurring typhoons. We rate Ocampo’s overall disaster preparedness as <span id="factual-score-20">8</span>.
+                                </p>
+                                <div class="photo-gallery">
+                                    <img src="assets/img/q20-1.png" alt="Evacuation center in Ocampo" class="fact-photo">
+                                    <img src="assets/img/q20-2.png" alt="MDRRMO personnel preparing relief goods" class="fact-photo">
+                                    <img src="assets/img/q20-3.png" alt="Drone monitoring of affected areas" class="fact-photo">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            <!-- Submit Button -->
+            <button type="submit" class="btn-cta">Submit Assessment</button>
+            </form>
+            
+            <!-- Result Section -->
+            <div id="results" class="results hidden">
+                <h3>Your Assessment Results</h3>
+                <table id="results-table">
+                    <thead>
+                        <tr>
+                            <th>Question</th>
+                            <th>User Rating</th>
+                            <th>Factual Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically added here -->
+                    </tbody>
+                </table>
+                <div class="score-container">
+                    <p>Your perception score: <span id="user-score">0</span>/10</p>
+                    <p>Our factual score: <span id="factual-score">0</span>/10</p>
+                    <p id="humor-feedback"></p>
+                    <p id="feedback"></p>
+                </div>
+                <button class="btn-cta" onclick="resetAssessment()">Take Again</button>
+                <button class="btn-cta" onclick="location.href='#infohub'">Visit Infohub</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="infohub" class="infohub-section">
+        <h2>INFOHUB</h2>
+    
+        <div class="presentation-gallery">
+            <div class="gallery-item">
+                <a href="https://andam-ocampo.my.canva.site/natural-disasters" target="_blank">
+                    <img src="assets/img/g1.png" alt="Presentation 1">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://andam-ocampo.my.canva.site/ways-and-step-to-safety" target="_blank">
+                    <img src="assets/img/g2.png" alt="Presentation 2">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://andam-ocampo.my.canva.site/natural-disasters-2" target="_blank">
+                    <img src="assets/img/g3.png" alt="Presentation 3">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.youtube.com/watch?v=vQMKQh8e8Q4" target="_blank">
+                    <img src="assets/img/g4.png" alt="Presentation 4">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.youtube.com/watch?v=kE3XAwR412I" target="_blank">
+                    <img src="assets/img/g5.jpg" alt="Presentation 5">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.youtube.com/watch?v=wjBdIo-nVVs" target="_blank">
+                    <img src="assets/img/g6.jpg" alt="Presentation 6">
+                </a>
+            </div>
+        </div>
+    
+        <!-- Emergency Hotlines -->
+        <div class="emergency-hotlines">
+            <h3>Emergency Hotlines in Camarines Sur</h3>
+            <div class="fb-post" data-href="https://www.facebook.com/VincenzoVillafuerte/posts/pfbid0YJYgB6ox5MLYzsKJbku5gNb43XSeyzBDiGbHi6emyUQpPnTew8GQ9AP4Ayg256p5l" data-width="2500"></div>
+        </div>
+    
+        <!-- Evacuation Centers -->
+        <div class="evacuation-centers">
+            <h3>List of Evacuation Centers</h3>
+            <div class="fb-post" data-href="https://www.facebook.com/cscofficial17/posts/pfbid0Lx7tgT9pmzeJTN4gUY5owB1tuTs6EpJ6VSDwZ653nmuuDosg2mCG6xGxFtdUyGtdl" data-width="2500"></div>
+        </div>
+    
+        <!-- Catalog of Useful Links -->
+        <div class="useful-links">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="https://www.pagasa.dost.gov.ph/" target="_blank">PAGASA-DOST</a></li>
+                <li><a href="https://www.phivolcs.dost.gov.ph/" target="_blank">Phivolcs-DOST</a></li>
+                <li><a href="https://hazardhunter.georisk.gov.ph/map#" target="_blank">HazardHunterPH - Hazard assessment at your fingertips</a></li>
+                <li><a href="https://geoanalytics.georisk.gov.ph/analyze/hazard/single" target="_blank">GeoAnalyticsPH Single Hazard Analysis</a></li>
+                <li><a href="https://hazard-risk-map.firebaseapp.com/" target="_blank">Philippine Hazard Risk Map</a></li>
+                <li><a href="https://noah.up.edu.ph/" target="_blank">NOAH - Know Your Hazards</a></li>
+                <li><a href="https://ndrrmc.gov.ph/" target="_blank">NDRRMC</a></li>
+                <li><a href="https://www.windy.com/" target="_blank">Windy: Wind map & weather forecast</a></li>
+            </ul>
+        </div>
+        
+        <!-- Catalog of Social Media Links -->
+        <div class="social-media-links">
+            <h3>Social Media Pages to Follow</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/PAGASA.DOST.GOV.PH" target="_blank">Dost_pagasa</a></li>
+                <li><a href="https://www.facebook.com/PHIVOLCS" target="_blank">Philippine Institute of Volcanology and Seismology (PHIVOLCS-DOST)</a></li>
+                <li><a href="https://www.facebook.com/NDRRMC" target="_blank">NDRRMC</a></li>
+                <li><a href="https://www.facebook.com/dilgcodix" target="_blank">DILG CODIX</a></li>
+                <li><a href="https://www.facebook.com/PHEmergencyAlerts" target="_blank">Philippine Emergency Alerts</a></li>
+                <li><a href="https://www.facebook.com/NGCPph" target="_blank">National Grid Corporation of the Philippines</a></li>
+                <li><a href="https://www.facebook.com/SouthernLuzonPRSD" target="_blank">Pagasa Southern Luzon</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61559915031648" target="_blank">Civil Defense Bicol - Region 5</a></li>
+                <li><a href="https://www.facebook.com/edmero.camarinessur" target="_blank">EDMERO Camarines Sur</a></li>
+                <li><a href="https://www.facebook.com/casurecoquatro" target="_blank">Casureco IV Official</a></li>
+                <li><a href="https://www.facebook.com/mdrrmo.ocampo" target="_blank">Ocampo MDRRMO</a></li>
+                <li><a href="https://www.facebook.com/OcampoFire" target="_blank">BFP R5 Ocampo</a></li>
+                <li><a href="https://www.facebook.com/ocampo.camsur" target="_blank">Ocampo Mps Csppo</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Include Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+
+    <section id="contact" class="contact-section">
+        <h3>Ganyan po ba dapat ang boses ng nagtatanong, mæm? 🤪</h3>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:sample@my.cspc.edu.ph">johnpsalcedo@my.cspc.edu.ph</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+639120468561">+639120468561</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-facebook"></i>
+                <a href="https://fb.com/jpyxs" target="_blank">fb.com/jpyxs</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-facebook-messenger"></i>
+                <a href="https://m.me/jpyxs" target="_blank">m.me/jpyxs</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <img src="assets/img/ao - line logo.png" alt="ao logo">
+        </div>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#hero">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#infohub">Infohub</a></li>
+          <li class="menu__item"><a class="menu__link" href="#about-section">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+        </ul>
+        <ul class="menu">
+            <li class="copyright">&copy; 2024 <i>Andam Ocampo</i> | Materials used under fair use. All rights belong to their respective owners. </li>
+        </ul>
+    </footer>
+
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="your_nonce"></script>
+    
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="homepage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>
