@@ -1,3 +1,35 @@
+// Preload images
+const images = [
+  'assets/img/1.png',
+  'assets/img/2.png',
+  'assets/img/3.png',
+  'assets/img/4.png',
+  'assets/img/5.png',
+  'assets/img/6.png',
+  'assets/img/7.png',
+  'assets/img/8.png',
+  'assets/img/9.png'
+];
+
+let loadedImages = 0;
+
+function preloadImages(imageArray, callback) {
+  imageArray.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      loadedImages++;
+      if (loadedImages === imageArray.length) {
+        callback();
+      }
+    };
+  });
+}
+
+preloadImages(images, () => {
+  document.getElementById('hero').style.animation = 'slideshow 22.5s infinite';
+});
+
 // Existing code...
 const words = ["Ready", "Resilient", "Prepared", "Equipped"];
 const changingWord = document.querySelector('.changing-word');
@@ -320,4 +352,3 @@ document.querySelector('.formbox button').addEventListener('click', function() {
     document.querySelector('#thankyoubox').style.display = 'block';
   }
 });
-
