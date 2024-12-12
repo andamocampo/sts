@@ -37,7 +37,7 @@ function startSlideshow() {
   setInterval(() => {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
-  }, 4500); // Change image every 3 seconds
+  }, 5000); // Change image every 3 seconds
 }
 
 // Existing code...
@@ -58,7 +58,7 @@ function typeWord(word) {
 setInterval(() => {
     currentIndex = (currentIndex + 1) % words.length;
     typeWord(words[currentIndex]);
-}, 3000);
+}, 4000);
 
 // Initial call
 typeWord(words[0]);
