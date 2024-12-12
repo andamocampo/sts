@@ -134,22 +134,8 @@
     color: white;
     overflow: hidden;
     z-index: 2;
-  
-    animation: slideshow 22.5s infinite;
-    }
-    
-    @keyframes slideshow {
-        0% { background-image: url('assets/img/1.png'); }
-        11.11% { background-image: url('assets/img/2.png'); }
-        22.22% { background-image: url('assets/img/3.png'); }
-        33.33% { background-image: url('assets/img/4.png'); }
-        44.44% { background-image: url('assets/img/5.png'); }
-        55.55% { background-image: url('assets/img/6.png'); }
-        66.66% { background-image: url('assets/img/7.png'); }
-        77.77% { background-image: url('assets/img/8.png'); }
-        88.88% { background-image: url('assets/img/9.png'); }
-        100% { background-image: url('assets/img/1.png'); }
-    }
+    transition: background-image 1s ease-in-out; /* Smooth transition for background image */
+  }
   
   .hero-text {
     margin-top: 45px;
