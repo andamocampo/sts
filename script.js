@@ -37,7 +37,7 @@ function startSlideshow() {
   setInterval(() => {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
-  }, 3000); // Change image every 3 seconds
+  }, 4500); // Change image every 3 seconds
 }
 
 // Existing code...
