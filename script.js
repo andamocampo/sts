@@ -27,8 +27,18 @@ function preloadImages(imageArray, callback) {
 }
 
 preloadImages(images, () => {
-  document.getElementById('hero').style.animation = 'slideshow 22.5s infinite';
+  startSlideshow();
 });
+
+function startSlideshow() {
+  const hero = document.getElementById('hero');
+  let currentImageIndex = 0;
+
+  setInterval(() => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
+  }, 3000); // Change image every 3 seconds
+}
 
 // Existing code...
 const words = ["Ready", "Resilient", "Prepared", "Equipped"];
